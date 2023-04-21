@@ -1,42 +1,230 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.nav {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav h1 {
+  color: #43A047;
+}
+
+.yellow {
+  color: #E4A81D;
+}
+
+.grey {
+  color: #757575;
+}
+
+.nav p {
+  color: #757575;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.fila {
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 3px;
+}
+
+.letra {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: grid;
   text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  place-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.letra:active {
+  transform: scale(1.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.bordado {
+  outline: 2px solid #90CAF9;
+}
+
+.teclado {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.teclado-fila {
+  display: flex;
+  height: 50px;
+}
+
+.teclado-fila button {
+  background-color: #E5E5E5;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s;
+  min-width: 50px;
+  margin: 0 3px;
+}
+
+@media (max-width: 560px) {
+    .teclado-fila button {
+      min-width: 40px;
+    }
+}
+@media (max-width: 460px) {
+    .teclado-fila button {
+      min-width: 30px;
+    }
+}
+
+img {
+  max-height: 25px;
+}
+
+.teclado-fila button:hover {
+  background-color: #a5b0bd;
+}
+
+p {
+  margin: 0;
+  cursor: default;
+}
+
+.verde {
+  transition: 1s;
+  background-color: #43A047;
+  color: white;
+}
+
+.gris {
+  background-color: #757575;
+  color: white;
+}
+
+.amarillo {
+  background-color: #E4A81D;
+  color: white;
+}
+
+.verde0, .gris0, .amarillo0 {
+  animation: darVuelta .5s linear ;
+}
+.verde1, .gris1, .amarillo1 {
+  animation: darVuelta .9s linear ;
+}
+.verde2, .gris2, .amarillo2 {
+  animation: darVuelta 1.3s linear ;
+}
+.verde3, .gris3, .amarillo3 {
+  animation: darVuelta 1.7s linear ;
+}
+.verde4, .gris4, .amarillo4 {
+  animation: darVuelta 2s linear ;
+}
+@keyframes darVuelta {
+  20% {
+    transform: rotateX(72deg);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    transform: rotateX(144deg);
+  }
+  60% {
+    transform: rotateX(216deg);
+  }
+  80%{
+    transform: rotateX(288deg);
+  }
+  100% {
+    transform: rotateX(360deg);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cursor-pointer {
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.winner {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.read-the-docs {
-  color: #888;
+.winner .text {
+    background: #111;
+    height: 300px;
+    width: 320px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.win {
+  color: white;
+}
+
+.boton-ganador button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+
+.boton-ganador button:hover {
+  cursor: pointer;
+  background-color: #ccc;
+  color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+@media (max-height: 850px) {
+    .footer {
+      position:initial;
+      margin: 0 auto;
+      transform: translate(0,0);
+      margin-top: 50px;
+    }
 }
