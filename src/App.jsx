@@ -204,7 +204,7 @@ function App() {
   }
 
   return (
-    <main className="App">
+    <main className={`App ${ganastePerdiste === true || ganastePerdiste === false ? "fijar-body" : "no-fijar-body"}`}>
       <Navbar />
       <div className='tabla'>
         {

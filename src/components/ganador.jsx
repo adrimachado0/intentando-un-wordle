@@ -11,7 +11,6 @@ export const Ganador = ({ganastePerdiste, handleClickReset}) => {
                         : "Lo siento, has perdido"
                     }
                 </h2>
-                <p>Prueba</p>
                 <footer className="boton-ganador">
                     <button onClick={handleClickReset}>Empezar denuevo</button>
                 </footer>  
